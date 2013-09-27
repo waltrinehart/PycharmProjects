@@ -1,0 +1,463 @@
+<map>
+    <intro>Welcome to Unpleasant Text Adventure.  These are the commands: INSPECT, INTERACT, INVENTORY, HUNGER, and EAT. This is all you need. You will die anyway so the lack of commands is really not an issue.
+
+
+    </intro>
+    <area name = "alley" link="alley" time = '500'>
+        <description>You wake up, knee deep in garbage, in a dirty alley.  Your head pounds as you extricate yourself from the refuse. You have no idea who you are or how you got here.  It is also very clear that you are terribly, terribly hungry. Your clothes appear to be filthy and made of burlap. You hear the busy noise of people going about their day in front of and behind you. Ahead, you see the bright colors of a market in full swing.  Behind, you smell the salt air and see the tall masts of ships.  To your left, a shady looking door stands slightly ajar. To your right, a shivering dog is asleep on top of a sewer grate. You really need something to eat. What do you do?</description>
+        <revisit>Upon reentering the alley, you are unsurprised to see that it is still completely full of garbage. The dog has not moved from it's spot either. The door is still curiously ajar.</revisit>
+        <timeup>You feel woozy from hunger. You have no more energy and collapse. You have starved to death.</timeup>
+
+        <exit name = 'door' link="Abandoned Room">
+            <inspect>This door looks pretty shady.  You wonder why someone would leave it just slightly open.  A faint light glows inside and an unrecognizable smell wafts from the open door.</inspect>
+            <interact>You push the door open slowly.  The hinge creaks like a dead hooker.  You walk inside.</interact>
+        </exit>
+
+        <exit name = 'docks,dock,ships,ship' link="docks">
+            <inspect>You hear the hustle and bustle of a busy dock.  You can see the masts of tall ships over the the tops of the buildings.</inspect>
+            <interact>Walking to the docks, you get a strange sense of deja vu.  You have been here before.</interact>
+        </exit>
+
+        <object name = 'dog,mutt'>
+            <inspect>This dog looks like it has seen better days.  It is missing patches of hair and is fairly emaciated.</inspect>
+            <interact  alive = 'n' inventory = 'n'>The dog looks pathetic.  You walk over and reach down to pet it. As soon as you touch the dog, it snarls and clamps down on your wrist like a vise. Unfortunately for you, its teeth pierce your veins.  In your weakened and groggy state, you are unable to fend off the dog.  You slowly bleed to death while the dog continues to bite you.  You die.</interact>
+        </object>
+
+        <exit name ='market,colors,color' link="market">
+            <inspect>The colors and smells of the market hit your senses.  You didn't realize just how hungry you are.</inspect>
+            <interact>You cannot keep away from the smell of food.  You walk towards the market as quickly as your worn body can take you.</interact>
+        </exit>
+
+    </area>
+
+
+    <area name="Abandoned Room" time = '70'>
+        <description>As you walk through the shady door you feel a chill.  It is surprisingly cold.  You have no idea why it is so cold but you ignore it and inspect your surroundings. An old icebox sits in one corner, water leaks out from under it. On a table next to the door there is a lamp illuminating two objects.  One appears to be a bottle filled with some sort of liquid.  The other is a sharp knife. The gross smell of the alley wafts in from the door behind you. What do you do?</description>
+        <revisit>The room is still shockingly cold.  The fridge, lamp, bottle, and knife have not moved.</revisit>
+        <timeup>You feel woozy from hunger. You have no more energy and collapse. You have starved to death.</timeup>
+
+        <object name = 'lamp,light,gaslamp,'>
+            <inspect>It is an old gas lamp.  You notice that it is a pleasant shade of red.</inspect>
+            <interact alive = 'n' inventory = 'n'>You pick up the lamp.  You figure it will be handy in exploring the rest of the darkened building. As you wave it around the room, you notice that there are no doors or windows.  Suddenly, your leg feels very wet. You look down and are startled to find the lamp leaking oil on you.  You drop the lamp in surprise and it shatters.  The newly freed flame catches the oil on your pants on fire. You flail around like a drunken dancer trying to extinguish the flame.  The rest of your burlap clothes catch and soon you are completely engulfed in flame.  You die a horrible, crispy death.</interact>
+        </object>
+
+        <object name = 'icebox,fridge'>
+            <inspect>This ice box looks to be out of use for quite some time.  It is cold to the touch.</inspect>
+            <interact alive = 'n' inventory = 'n'>Given your hunger, you figure there might be -something- to eat in the icebox.  The lid is heavy and you struggle to lift it up.  You heave with all your might to get the lid up. The lid lifts to be fully opened but in the process of heaving you slip on the water coming out from under the icebox.  You fall into the icebox upside down and the heavy lid slams shut on your ankles. They shatter like glass.  Your scream is muffled and you are in a pain unlike any you have felt before.  After some time, you are slowly able to get your crippled legs out from under the lid. However, you realize that the lid doesn't open from the inside.  Your screams are loud inside of the icebox but are not heard outside of the room.  As the building is abandoned, you are never found and slowly starve to death inside the cold confines of the ice box.</interact>
+        </object>
+
+        <object name = 'knife,blade'>
+            <inspect>The knife appears to be very sharp.  This is unusual since it is obvious no one has been in this room for a very long time.  There is a faint sheen on the blade you can't identify.</inspect>
+            <interact alive = 'n' inventory = 'n'>You figure it is an excellent idea to be able to protect yourself from danger in an unknown city.  You pick up the knife and gently touch the blade with your thumb to test the sharpness. It turns out that it is exceedingly sharp and easily slices your thumb open.  You say fuckword after fuckword and drop the knife.  You sit down and manage to stem the bleeding with a strip of burlap from your pants. You stand up and feel nauseous.  Your vision blurs and you begin to see double.  Then quadruple. Then octuple.  As you collapse you realize that the sheen on the blade you didn't recognize was probably poison. Who would leave a poisoned blade in an abandoned building?  Your thoughts become muddled and you slowly drift off into a deep sleep from which you never wake.</interact>
+        </object>
+
+        <object name = 'bottle'>
+            <inspect>This bottle has a creamy white liquid in it.  On top of the cork is a seal with the image of a cow on it.</inspect>
+            <interact alive = 'n' inventory = 'n'>Your stomach rumbles and you pick up the bottle.  All the evidence points to it being milk so you eagerly crack it open and drain the entire bottle. It is thicker than you remember milk being and much, much sweeter, but you don't care since you are so hungry. As it is going down your throat you feel it congealing.  It seems to be getting harder as it goes down.  You start to choke as it fills your throat.  You quickly run out of air and die.</interact>
+        </object>
+
+        <object name = 'sack' invname = 'cheese'>
+            <inspect>You look inside the sack.  It is mostly filled with garbage.</inspect>
+            <interact alive = 'y' inventory = 'y'>You dig through the garbage and are rewarded with a wedge of wax-covered cheese! Huzzah!</interact>
+        </object>
+
+        <exit name = 'door' link = 'alley'>
+            <inspect>Turning around, you spot a sack hanging off the back of the door.</inspect>
+            <interact>You walk back into the alley.  The smell is worse than before. The dog doesn't seem to have moved an inch.</interact>
+        </exit>
+    </area>
+
+    <area name= "docks" time = '70'>
+        <description>The docks are bustling with activity. An army of dock workers transports goods from cargo ships to warehouses and vice versa.  A group of sailors are playing dice outside a tavern called the "Lusty Wench". There are also a plethora of fishermen fishing off the dock.  They look like they have been lucky today as their buckets are overflowing with fish.  There is a group of large, well-muscled men standing by the gang plank of a large warship. What do you do?</description>
+        <revisit>The hustle and bustle of a busy day continues on the docks. The sailors are still dicing, the warship is still docked, the fisherman still fish, and the bar still produces drunks at an alarming rate.</revisit>
+        <timeup>You feel woozy from hunger. You have no more energy and collapse. You have starved to death.</timeup>
+
+        <object name = 'sailors,sailor,dice,drunks'>
+            <inspect>The sailors seem to be enjoying a raucous game of dice.  They also appear to be the very special type of drunk that sailors on leave get to enjoy.</inspect>
+            <interact alive = 'n' inventory = 'n'>You feel like sailors in a state of inebriation will be far more friendly than they would otherwise be.  You are desperately hungry so you stumble towards them.  Focusing on the drunken sailors you don't pay attention to the rest of the street traffic. You trip over a stray cat and fall under a cart being pulled by some oxen. The wheel rolls over your neck, killing you instantly.</interact>
+        </object>
+
+        <object name = 'fish,fisherman,fishermen,fishes,bucket'>
+            <inspect>The fish look tasty. The fishermen are preoccupied with their lines.</inspect>
+                <interact alive = 'n' inventory = 'n'>Those fish sure look tasty.  You sneak over to the fish and bend down to pick one up.  As you are bent over a fisherman turns around and whacks you in the back with his fishing rod. This sends you flailing off the dock. Fortunately, you get caught in some ropes hanging off the dock.  Unfortunately, your neck is what gets caught.  The fishermen are shocked and appalled by your impromptu hanging. </interact>
+            </object>
+
+        <object name = 'warship,men,group,muscles'>
+            <inspect>The warship is very large and intimidating.  It is bristling with cannons. The large men eye you suspiciously.</inspect>
+            <interact alive = 'n' inventory = 'n'>You cannot remember seeing anything as large as this warship.  Of course, you really can't remember anything anyway.  You ignore your hunger and walk over to the ship, gazing up at the tall mast with its pitch black sails. You zone out for sometime, gazing at its beauty.  The large men next to the ship take notice of you and walk over.  Before you know it, you are being press-ganged onto the ship.  After only a week aboard, you contract scurvy and die.</interact>
+        </object>
+
+        <exit name = 'tavern,bar,inn,Lusty Wench' link="tavern">
+            <inspect>The "Lusty Wench" looks very clean for a dock side tavern.  Sailors and other dockworkers enter and exit at a decent pace. It looks fairly busy.</inspect>
+            <interact>The thought of getting anything inside your belly is all that drives you at the moment.  You walk into the tavern.</interact>
+        </exit>
+
+        <exit name = 'alley' link = 'alley'>
+            <inspect>From this side, the alley looks very depressing.</inspect>
+            <interact>You decide to go back to the alley.  Apparently, good life choices are not in your skill set.</interact>
+        </exit>
+
+    </area>
+    <area name="market" time = '70'>
+        <description>The marketplace is bustling with activity.  Stalls line the sides of the street while vendors hawk their wares.  You are standing behind a cart selling meat pies.  A beautiful fountain stands in the middle of the market, water spews from statues in a wonderful cascade. A group of guards is lounging idly by the fountain.  This must be a peaceful city if they are so relaxed. You notice a potter selling wonderful looking ceramics. This sparks a sense of familiarity that you can't quite understand.</description>
+        <revisit>If anything, the smells of food in the market have become more enticing. The meat pie vendor still haggles with customers while the potter looks anxious.  The guards still laze about the fountain.</revisit>
+        <timeup>You feel woozy from hunger. You have no more energy and collapse. You have starved to death.</timeup>
+
+        <object name = 'meat,stand,vendor,booth,meatpie,meat pie'>
+            <inspect>The smell from the meat pies fills your nostrils with its heavenly aroma.  The vendor is currently haggling with another customer at his booth, paying no attention to you. A few apples have fallen off his cart into the mud.</inspect>
+            <interact alive = 'n' inventory = 'n'>You quickly realize that you have no money.  Your hunger overwhelms you and you sneakily try to steal one of the meatpies.  Before you can make your getaway the shopkeeper sees you. "Thief!" he shouts!  The guards at the fountain immediately surround you with halberds.  Even though you didn't know this, the penalty for theft in this city is summary execution. You are beheaded on the spot.  </interact>
+        </object>
+
+        <object name =  'apple' invname = 'apple'>
+            <inspect>Despite being in the mud, the apples looks very tasty.</inspect>
+            <interact alive = 'y' inventory = 'y'>You nonchalantly pick up an apple and put it in the pocket of your burlap shirt.  Nobody notices (or cares, since it is a muddy apple).</interact>
+        </object>
+
+        <object name = 'fountain'>
+            <inspect>This fountain is clearly a work of art. You guess that it took many craftsmen hundreds of hours to craft it.</inspect>
+            <interact alive = 'n' inventory = 'n'>You lean over the fountain and look in.  The water is clear and sparkling.  It looks safe to drink so you lean in and scoop some water into your mouth.  A passing carriage bumps you into the fountain right as it hits a pothole. The pothole causes a heavy box to fly off the top of the carriage where it was improperly secured.  The box lands on you and traps you under the water of the fountain.  You drown before you are able to be rescued.</interact>
+        </object>
+
+        <object name = 'guards'>
+            <inspect>Three guards laze about the fountain, idly chatting.  They are wearing light armor and are carrying long halberds.</inspect>
+            <interact alive = 'n' inventory = 'n'>You walk up to the guard and ask them if they know of a place to get free food.  Your words cause them to stand up in alarm, halberds raised.  Apparently, you speak the language of an enemy city-state. Since they are not terribly intelligent, they believe you to be a spy and hack you apart with their halberds.</interact>
+        </object>
+
+        <exit name = 'potter,pottery' link="pottery">
+            <inspect>The potter has just sold a pot to a pleased looking customer and is now busying himself rearranging his wares.</inspect>
+            <interact>You walk up to the stall and greet the potter.  His face is startled when he hears you speak. He immediately rushes you into the pottery behind his stall.</interact>
+        </exit>
+
+        <exit name = 'alley' link = 'alley'>
+            <inspect>The smells wafting from the alley do not smell nearly as good as the smells where you are now.  This is an understatement.</inspect>
+            <interact>You walk back into the alley to see if the dog is still there.</interact>
+        </exit>
+    </area>
+
+    <area name = "pottery" time = '60'>
+        <description>The potter is babbling something in a language you can't understand.  He makes a calming motion and closes the door behind you.  You are left, confused and alone, to look around his pottery.  This appears to be his storage area. It smells rather musty.  Pots are stacked up to the ceiling.  There are a number of cabinets along the walls. There is a ladder up to the roof and the door behind you is closed, but not locked.</description>
+        <revisit>Mustiness abounds in the pottery.</revisit>
+        <timeup>You feel woozy from hunger. You have no more energy and collapse. You have starved to death.</timeup>
+
+        <object name = 'jerky,meat' invname = 'jerky'>
+            <inspect>The jerky looks delicious.  Jerky never goes bad, right?</inspect>
+            <interact alive = 'y' inventory = 'y'>You grab the jerky and stuff it into your burlap sack.</interact>
+        </object>
+
+        <object name = 'sign,poster'>
+            <inspect>You don't know the language, but the poster appears to offer a reward.  You recognize some of the words as relating to a familiar country.  You should probably get out of here.</inspect>
+            <interact alive = 'y' inventory = 'n'>You don't see any point in doing anything with this poster.</interact>
+        </object>
+
+        <object name = 'pots,pot,stack,stacks,pottery'>
+            <inspect>The pots are stacked all over the place. You wonder what is in them.</inspect>
+            <interact alive = 'n' inventory = 'n'>You stand on your tiptoes to look in one of the lower stacks of pots.  As you look in you see they are empty.  That is mildly disappointing.  However, as you step away the pots tremble and begin to fall. You try to get out of the way but are unsuccessful.  The pots all crash down upon you, crushing you to death (there were a LOT of pots).</interact>
+        </object>
+
+        <object name = 'cabinet,cabinets'>
+            <inspect>The cabinets appears worn from use. They are not locked.</inspect>
+            <interact alive = 'y' inventory = 'n'>You open the cabinets and take a look inside.  There are various pottery tools inside.  There is also a bag of jerky.</interact>
+        </object>
+
+        <object name = 'door,market'>
+            <inspect>On the back of the door there is a poster.  It appears to be a wanted poster.</inspect>
+            <interact alive = 'n' inventory = 'n'>You open the door with the intention of trying to find more food in the market.  The guards from the fountain stand at alert outside the pottery while the potter talks to them excitedly and points to the door.  It turns out that there is a reward for people such as yourself.  The guards spot you in the doorway and immediately hack you to death with their halberds.</interact>
+        </object>
+
+        <exit name = 'ladder,roof' link = 'rooftops'>
+            <inspect>The ladder looks sturdy enough. There is a trapdoor in the ceiling.</inspect>
+            <interact>As you climb up the ladder and out onto the roof, you hear shouts from the open trap door.  You look back inside and see members of the city guard pointing at you and shouting.  You better run quick!</interact>
+        </exit>
+    </area>
+
+    <area name = "tavern" time = '60'>
+        <description>Despite the time, the Lusty Wench is a flurry of activity.  Sailors and dock hands are enjoying food and spirits all around you.  Tavern wenches bus food back and forth to hungry people while the barkeep pours pint after pint of a dark, brown beer. A poker game goes on in one corner while two sailors are arm wrestling in another. You notice an empty table near the bar.</description>
+        <revisit>The wenches seem lustier this time around.</revisit>
+        <timeup>You feel woozy from hunger. You have no more energy and collapse. You have starved to death.</timeup>
+
+        <object name = 'table,empty'>
+            <inspect>The table appears to be open.</inspect>
+            <interact alive = 'n' inventory = 'n'>You sit down at the table. After five minutes of waiting for a helpful wench you feel a tap on your shoulder. A veritable giant of a man stands behind you. He looks angry. Apparently, you have taken his table.  He proceeds to beat the living snot out of you.  Unfortunately, he does not know his own strength and accidentally cracks your neck. You are dead. If it is any consolation he is hanged for murder.</interact>
+        </object>
+
+        <object name = 'wench,girl' invname = 'bread'>
+            <inspect>The barmaids scurry to and fro. They are wearing scandalously low-cut shirts.</inspect>
+            <interact alive = 'y' inventory = 'y'>A barmaid sees you and the dirty burlap sack you are wearing.  A look of sadness crosses her face and she goes into the kitchen.  She gives you half a loaf of bread. Huzzah!</interact>
+        </object>
+
+        <object name = 'poker,game,sailor,sailors'>
+            <inspect>Some sailors appear to be playing some sort of poker variant.</inspect>
+            <interact alive = 'y' inventory = 'n'>You can't play poker without money. Don't be stupid.</interact>
+        </object>
+
+        <object name = 'bartender,barkeep,bar,beer,beers' invname = 'beer'>
+            <inspect>The barkeep is pouring beer at an alarming rate, setting them on the counter for the barmaids to deliver to customers.</inspect>
+            <interact alive = 'y' inventory = 'y'>You discreetly grab one of the beers when the barkeep has his back turned. Huzzah! He doesn't notice.</interact>
+        </object>
+
+        <object name = 'wrestler,wrestlers,arm'>
+            <inspect>A wiry looking fellow seems to be offering a gold piece to anyone who can defeat him at arm wrestling.</inspect>
+            <interact alive = 'n' inventory = 'n'>You decide that a gold piece could get you quite a bit of food.  The guys isn't that big, you shouldn't have a problem right?  You sit down at his table and put up your hand.  He grins and clasps it. You think you are putting up a good fight but suddenly your forearm snaps in half.  You scream like a banshee and push away from the table.  You are in an unimaginable amount of pain and flail about, knocking people over and generally pissing everyone off.  In your state of disorientation you trip and fall out one of the windows.  Unfortunately for you the window faces the ocean.  You hit the water with a loud crack.  Your other arm shatters with the impact.  You get tangled up in some seaweed and are unable to extricate yourself with your broken arms. You drown.</interact>
+        </object>
+        <exit name ='docks,dock,door' link = 'docks'>
+            <inspect>You hear seagulls outside.</inspect>
+            <interact>This place is a little too busy for your tastes, you head back outside.</interact>
+        </exit>
+    </area>
+
+    <area name = 'rooftops' time = '30'>
+        <description>In a rush, you try to get a bead on your surroundings. From where you are, you determine that you can jump to the roof of the blacksmith, the roof of an apartment building, or that you can leap off the roof into a pile of garbage in the alley below. </description>
+        <timeup>While you building up the courage to jump, the guards climb up behind you and hack you to death with their halberds.</timeup>
+
+        <object name = 'blacksmith,forge'>
+            <inspect>The roof of the blacksmith looks sound.</inspect>
+            <interact alive = 'n' inventory = 'n'>You get a running start and jump to the roof of the blacksmith.  The roof is far less sound than it looked.  You fall through the roof and land directly on top of the blacksmith. It turns out he was filling a mold with liquid hot metal.  It tips over and pours directly onto your face.  You receive 15 seconds of sheer agony before dying of shock.</interact>
+        </object>
+
+        <object name = 'off,alley,garbage'>
+            <inspect>You really just have to hope the garbage is soft.</inspect>
+            <interact alive = 'n' inventory = 'n'>You jump off the roof into the pile of garbage. The fall breaks one of your legs.  You scream out in pain, alerting the guards in front.  As you feebly try to hobble away, the guards run down the alley and hack you to death with their halberds.</interact>
+        </object>
+        <exit name = 'apartment,apt,apartments' link = 'apartment'>
+            <inspect>The apartment building is a small jump. The roof is wooden.</inspect>
+            <interact>You leap to the apartment building and do a ninja roll when you land.  You feel fairly bad ass.  The first guard has made it onto the roof of the pottery.</interact>
+        </exit>
+    </area>
+
+    <area name = 'apartment' time = '30'>
+        <description>The guards are much closer now. A quick sweep of the area determines you can jump to a nearby launderers, a guardhouse, or you can attempt to slide down a line to the alley below. Better hurry.</description>
+        <timeup>You take too long to decide. A guard does a flying leap to the apartment building and decimates you in midair with his halberd. Your last thought is how bad ass he looked.</timeup>
+
+        <object name = 'slide,alley,line'>
+            <inspect>A quick tug leads you to believe the line can hold your weight.</inspect>
+            <interact alive ='n' inventory = 'n'>Your belief was incorrect. As soon as you put your weight on the line it breaks. You fall to the earth and land in a crumpled heap. You are dead.</interact>
+        </object>
+
+        <object name = 'guard,guardhouse'>
+            <inspect>The guardhouse is made of solid stone, it looks safe enough to jump on.</inspect>
+            <interact alive ='n' inventory = 'n'>You jump onto the roof of the guardhouse, startling a few guards you didn't see on the roof. They proceed to hack you to death with halberds for trespassing.</interact>
+        </object>
+
+        <exit name = 'launderer,laundry,laundromat' link = 'launderer'>
+            <inspect>The roof of the laundry is clean. Laundry hangs on a number of lines on top of the building.</inspect>
+            <interact>You take a running leap and land on top of the roof of the laundry. The guards are still tailing you.</interact>
+        </exit>
+    </area>
+
+    <area name = 'launderer' time = '30'>
+        <description>In between the hanging laundry you see a ladder down to the alley below.  A bearded man you didn't see previously is hanging laundry. There is also an open door with a staircase leading down to the first floor of the launderer.</description>
+        <timeup>Your indecision allows the guards enough time to jump to the laundromat.  You scramble away from them and get tangled in the laundry.  The launderers are going to have to wash all their clothes again.</timeup>
+
+        <object name = 'stairs,stair,staircase,door'>
+            <inspect>The door is open, you hear the singing of washer women from below.</inspect>
+            <interact alive = 'n' inventory = 'n'>You run down the stairs. You startle the washer women.  They proceed to start hitting you with their washing boards in a frenzy.  This delays you long enough to get captured by the guards and executed on the spot.</interact>
+        </object>
+
+        <object name = 'bearded,man,launderer'>
+            <inspect>The bearded man is surprised by your presence.</inspect>
+            <interact alive = 'y' inventory = 'n'>This man is of no use to you. He is useless.</interact>
+        </object>
+
+        <exit name = 'ladder,alley' link = 'backalley'>
+            <inspect>The ladder is made of metal. It's a ladder, not much to describe.</inspect>
+            <interact>You run to the ladder. In your haste to reach the ladder, you run into the bearded man. You set him off balance in such a way that he falls off the roof.  As he falls you hear him shout "But I'm Abeeeeeeeeeee!" before he lands with a crunch. You reach the ladder and slide down. </interact>
+        </exit>
+    </area>
+
+    <area name = 'backalley' time = '15'>
+        <description>This alley is surprisingly clean.  You see guards with their backs to you at the exit of the alley, that's no good. However, there are four doors painted in different colors. Red, blue, green and white. Better pick one fast.</description>
+        <timeup>The pretty colors of the doors have distracted you for too long. The guards on the roof call the guards at the end of the alley who proceed to hack you to death with halberds.</timeup>
+
+        <object name = 'red,reddoor'>
+            <inspect>The bright red of the door is marred slightly by some scuff marks. There is a vague meat smell coming from that direction. Your stomach rumbles.</inspect>
+            <interact alive = 'n' inventory = 'n'>You open the red door and slip inside.  You startle the butcher who is currently hacking apart a cow.  He proceeds to hack you apart with a cleaver.  Ouch.</interact>
+        </object>
+
+        <object name = 'green,greendoor'>
+            <inspect>The green door is stained in an unusual fashion.</inspect>
+            <interact alive = 'n' inventory = 'n'>Upon entering the green door it is immediately apparent that this is the shop of an alchemist. It is apparently the shop of a careless alchemist since the vibration from shutting the door knocks a bottle onto your head.  The bottle shatters instantly. You are now covered in acid. It quickly dissolves skin and various other parts.</interact>
+        </object>
+
+        <object name = 'white,whitedoor'>
+            <inspect>The white door is slightly ajar.</inspect>
+            <interact alive = 'n' inventory = 'n'>You open the door to find that you have walked into the guardhouse.  Three guards playing poker look up at you.  Luckily, they don't have their halberds. Unluckily, they have their fists. You are beaten to death.</interact>
+        </object>
+
+        <exit name = 'blue,bluedoor' link = 'warehouse'>
+            <inspect>The paint on the blue door is chipping.</inspect>
+            <interact>You quickly open the blue door and duck inside.  It has a bar on the door. You lock it right before a guard tests the door.  After a minute you hears his footsteps as he walks away.</interact>
+        </exit>
+    </area>
+
+    <area name = 'warehouse' time = '60'>
+        <description>The warehouse is dark.  There doesn't seem to be anyone else here.  At the far end is another door. There are rows of shelves on the left.  On the right there are a number of large boxes.</description>
+        <timeup>You don't realize how hungry you are until it is too late. You starve to death.</timeup>
+        <revisit>It is still fairly dark in the warehouse. The shelves and boxes have not moved.</revisit>
+
+        <object name = 'shelf,shelves' invname = 'onion'>
+            <inspect>Theses shelves are currently holding a number of crossbows.</inspect>
+            <interact alive = 'y' inventory = 'y'>Rummaging around on the shelves yields you an onion! You have no idea why there is an onion on a shelf full of crossbows, but you really don't care.</interact>
+        </object>
+
+        <object name = 'crossbow,crossbows,xbow'>
+            <inspect>The crossbows look very deadly. They don't have bolts loaded, but for some reason they are already cocked.  Maybe someone expects to need to fire them quickly?</inspect>
+            <interact alive = 'n' inventory = 'n'>You pick up a crossbow and take a closer look.  You sight down the stock and accidentally pull the trigger.  The crossbow kicks very hard and knocks you into the shelf.  The shelf wobbles back and forth before falling on you.  You are thoroughly trapped.  You expect someone will come check the warehouse soon.  Your expectations are not fulfilled. You starve to death.</interact>
+        </object>
+
+        <object name = 'box,boxes'>
+            <inspect>The boxes are fairly large. You see one in the back that is not sealed.</inspect>
+            <interact alive = 'n' inventory = 'n'>You pull the lid off the box.  Inside is a large beehive.  With the lid open, the bees immediately swarm out into freedom.  It turns out that freedom for a bee is stinging the hell out of you.  You run around flailing your arms but are unable to prevent the bees from stinging.  Eventually you collapse and die from all the stings.</interact>
+        </object>
+
+        <exit name = 'door,street' link = 'street'>
+            <inspect>The door seems to lead outside to a street.  You can hear people noises.  On the ground near the side of the door is a travel sack.</inspect>
+            <interact>You open the door and walk out onto the street.</interact>
+        </exit>
+
+        <object name = 'sack,travelsack' invname = 'potato'>
+            <inspect>It looks like a fairly ordinary sack. It has a lump.</inspect>
+            <interact alive = 'y' inventory = 'y'>You open the sack and find a potato! Cook it, mash it, put it in a stew!</interact>
+        </object>
+    </area>
+
+    <area name = 'street' time = '60'>
+        <description>This street isn't terribly busy. Right across the street is a church. A somber graveyard is next to it.  Down the street a ways is a small park with a pleasant looking pond. A drunkard stumbles around in a circle holding a flagon of some sort of alcoholic beverage.</description>
+        <revisit>There is a little more traffic than before.  Otherwise, the church, graveyard and park are still there.</revisit>
+        <timeup>You spend so much time looking at the facade of the church that you starve to death.</timeup>
+
+        <object name = 'drunk,drunkard' invname = 'cider'>
+            <inspect>You are astonished that this man is this drunk at this time.  He seems to be barely aware of his surroundings.</inspect>
+            <interact alive = 'y' inventory = 'y'>You walk over to the drunk to see if he is alright. He looks at you for a second, clearly confused.  He hands you his nearly full flagon and proceeds to pass out in the middle of the street. Not wanting to attract attention to yourself, you walk away with his flagon of what appears to be cider. Huzzah!</interact>
+        </object>
+
+        <exit name = 'church' link = 'church'>
+            <inspect>The church is a large, ornate building.  It is clearly of great importance in this city.</inspect>
+            <interact>You walk up the stairs and into the church.</interact>
+        </exit>
+
+        <exit name = 'graveyard,cemetary' link = 'graveyard'>
+            <inspect>The graveyard is full of large tombstones.</inspect>
+            <interact>You are slightly apprehensive about going into a graveyard, but you figure there might be some mushrooms or moss to eat or something. </interact>
+        </exit>
+
+        <exit name = 'garden,park,pond' link = 'park'>
+            <inspect>The park looks quite idyllic.</inspect>
+            <interact>You have a good feeling about the tree overlooking the pond. It could be bearing fruit.</interact>
+        </exit>
+
+        <exit name = 'warehouse' link = 'warehouse'>
+            <inspect>The blue warehouse is a lot larger looking from this side.</inspect>
+            <interact>You decide that there might be something more to explore in the warehouse and head inside.</interact>
+        </exit>
+    </area>
+
+    <area name = 'church' time = '60'>
+        <description>On the inside, the church is resplendent. Excessive decorations abound.  A confessional is close to you at the door.  There is a small storage closet behind the rectory.  A priest is busy cleaning the stained glass.  You hear the sounds of the street behind you.</description>
+        <revisit>The church is just as imposing as it was the first time. The priest is still cleaning the glass and the confessional and closet are in the same location (Surprise!).</revisit>
+        <timeup>The priests find you dead of starvation in one of the pews.</timeup>
+
+        <object name = 'priest,glass'>
+            <inspect>The priest is diligently cleaning a beautiful piece of stained glass while standing on a stepladder. He seems pretty into it.</inspect>
+            <interact alive ='n' inventory = 'n'>You walk up behind the priest to get a better look.  Your sudden presence scares the hell out of him and he slips and falls off the ladder into the stained glass window.  It shatters with a bang.  You look up and one of the large pieces of broken glass slices through your throat.  You stumble around, gurgling, before you expire.</interact>
+        </object>
+
+        <object name = 'closet,storage'>
+            <inspect>The nondescript closet is unwatched by anybody.</inspect>
+            <interact alive ='y' inventory = 'n'>You open the door and take a look. Inside are a box of communion wafers and a rat eating some of them.</interact>
+        </object>
+
+        <object name = 'confessional,confession,booth'>
+            <inspect>It looks like a fairly ordinary confessional.</inspect>
+            <interact alive ='n' inventory ='n'>You open the door and sit in the booth. A priest is sitting in the opposite booth and begins to speak to you.  You don't understand this language and tell him so.  Hearing your language, he freaks out and runs out of the booth.  You are a bit confused when suddenly the door opens and you are pulled out by a group of priests.  They tie you up and carry you outside into the street.  A crowd forms as the priests began to create a large pile of wood.  They tie you to a stake and the crowd begins to pelt you with food (sadly, none of this food goes in your mouth).  The priest bring out a torch as you began to protest.  They burn you at the stake.  Apparently, you are a heretic.</interact>
+        </object>
+
+        <object name = 'wafers,communion,wafer,cracker,crackers' invname = 'wafers'>
+            <inspect>They look fairly tasty.</inspect>
+            <interact alive ='y' inventory = 'y'>You grab some wafers. You feel slightly bad stealing from a church.</interact>
+        </object>
+
+        <object name = 'rat,mouse,vermin'>
+            <inspect>The rat is doing its best to eat all the wafers.</inspect>
+            <interact alive = 'y' inventory = 'n'>You know better than to mess with a rat. Much like toddlers, those things are riddled with diseases.</interact>
+        </object>
+
+        <exit name = 'street' link = 'street'>
+            <inspect>Yup, that street is still there.</inspect>
+            <interact>You walk back out onto the street.</interact>
+        </exit>
+    </area>
+
+    <area name = 'graveyard' time = '60'>
+        <description>The graveyard is spooky, despite it being the middle of the day.  There is a large impressive tomb in the center.  Numbers of small gravestones surround the outer edge of the graveyard.  A couple stands weeping over a small grave at the far end of the cemetery.</description>
+        <revisit>If anything, the graveyard is even spookier on your return.</revisit>
+        <timeup>Reading the inscriptions on all the tombstones takes a lot out of you. You starve to death.</timeup>
+
+        <object name = 'tomb'>
+            <inspect>This tomb clearly holds the remains of a powerful, important individual.</inspect>
+            <interact alive = 'n' inventory = 'n'>You walk into the tomb. It is empty except for a staircase. You decide to take a peek and walk down the stairs into the crypt.  As your eyes are adjusting to the dark, you hear voices upstairs.  You freeze and look around for a hiding spot (pretty futile, since it is dark).  Suddenly, you hear the sound of a large stone being moved. You realize they have closed the crypt.  You try to shout and bang on the rock but it is useless.  Over the coming weeks, you join the corpses already inhabiting the tomb in death.</interact>
+        </object>
+
+        <object name = 'graves,grave,gravestone,gravestones'>
+            <inspect>There are a number of graves. You can't read the writing on any of them.</inspect>
+            <interact alive = 'y' inventory = 'n'>Searching around the tombstones, you see some mushrooms.</interact>
+        </object>
+
+        <object name = 'couple,weepy'>
+            <inspect>They seem to be mourning the loss of a loved one.</inspect>
+            <interact alive = 'n' inventory = 'n'>As you get closer, you realize that the grave is fresh.  It is also small, like the grave of a child.  This is the most depressing thing you have ever seen.  You sink to the ground, spirit broken.  You lay there, weeping, until you starve to death.</interact>
+        </object>
+
+        <object name = 'mushroom,mushrooms' invname = 'mushrooms'>
+            <inspect>These white mushrooms seem legit.</inspect>
+            <interact alive = 'y' inventory = 'y'>You pick some of the mushrooms.</interact>
+        </object>
+
+        <exit name = 'street' link = 'street'>
+            <inspect>It's a street. You've been there, you know this.</inspect>
+            <interact>You walk back out onto the street.</interact>
+        </exit>
+    </area>
+
+    <area name = 'park' time = '60'>
+        <description>The park is very peaceful. An undisturbed pond is the centerpiece, swans grace it with their presence. A pear tree hangs over the pond.  You can see pears on the ground.  A wealthy couple sits on a bench, enjoying the park. A row of bushes rings the park, creating a natural border.</description>
+        <revisit>If anything, the park is more peaceful than before. The pear tree still overlooks the pond and the couple still peacefully chats quietly on the bench.</revisit>
+        <timeup>It is so peaceful you forget how hungry you are. Unfortunately, your body doesn't and you starve to death.</timeup>
+
+        <object name = 'swans,pond,swan'>
+            <inspect>The swans look majestic swimming through the pond.</inspect>
+            <interact alive = 'n' inventory = 'n'>You get a little too close to the pond. You slip and fall in.  Since you have now gotten near their nest, the swans attack you.  They are vicious and unrelenting bastards. You are slowly bitten to death by swans.</interact>
+        </object>
+
+        <object name = 'tree,peartree'>
+            <inspect>The pears in the tree look far tastier than the bruised pears on the ground.</inspect>
+            <interact alive = 'n' inventory = 'n'>You climb up the tree, hoping to lay hands on its tasty fruit.  As you grab a pear, you lose your grip and fall into the pond.  The swans do not appreciate this ingress into their territory and attack you.  They are vicious and unrelenting bastards. You are quickly bitten to death by swans.</interact>
+        </object>
+
+        <object name = 'pear,ground,pears' invname = 'pears'>
+            <inspect>These pears are a little bruised because of their trip down from the tree. However, the access to these pears is easier.</inspect>
+            <interact alive = 'y' inventory = 'y'>You pick up some pears.</interact>
+        </object>
+
+        <object name = 'wealthy,couple,bench'>
+            <inspect>They look pretty wealthy. They are talking quietly.</inspect>
+            <interact alive ='n' inventory = 'n'>You decide to impress upon the kindness of strangers. As soon as the man sees you walking towards them, he stands up and draws his sword.  You back away with your hands up, clearly this guy doesn't want a hobo in a burlap sack approaching his date. As you are backing away, you trip over a rock and fall into the pond.  The swans are furious that you are in their pond and attack you.  They are vicious and unrelenting bastards. You are angrily bitten to death by swans.</interact>
+        </object>
+
+        <object name = 'border,bush,bushes' invname = 'berries'>
+            <inspect>The bushes have bright red berries on them.</inspect>
+            <interact alive = 'y' inventory = 'y'>Those berries look damn delicious. You take some time to gather a couple of handfuls.</interact>
+        </object>
+
+        <exit name = 'street' link = 'street'>
+            <inspect>The street is still there. It looks like a street.</inspect>
+            <interact>You got back to the street.</interact>
+        </exit>
+    </area>
+
+
+
+
+
+
+
+</map>
